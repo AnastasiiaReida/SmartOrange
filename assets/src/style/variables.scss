@@ -1,0 +1,75 @@
+
+// Variables Bootstrap 4
+$font-family-sans-serif:'TeXGyreHerosRegular', sans-serif;
+$input-btn-font-family:'TeXGyreHerosRegular', sans-serif;
+$yellow: #A68E52;
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$modal-lg: 767px;
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 50' width='350' height='50'><defs><marker id='arrowhead' markerWidth='5' markerHeight='3.5' refX='5' refY='1.75' orient='auto'><polygon points='5 0, 5 3.5, 0 1.75' fill='#fff'/></marker></defs><line x1='40' y1='25' x2='290' y2='25' stroke='#fff' stroke-width='8' marker-start='url(#arrowhead)'/></svg>");
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 50' width='350' height='50'><defs><marker id='arrowhead' markerWidth='5' markerHeight='3.5' refX='0' refY='1.75' orient='auto'><polygon points='0 0, 5 1.75, 0 3.5' fill='#fff'/></marker></defs><line x1='0' y1='25' x2='250' y2='25' stroke='#fff' stroke-width='8' marker-end='url(#arrowhead)' /></svg>");
+
+// $body-bg: #FFFFFF;// хотя в дизайне #E5E5E5 но визуально он темнее;
+// $gray-600: #F8F8F8; //$secondary: 
+
+ 
+
+//бесплатная замена платному Helvetica Neue Cyr
+@font-face {
+  font-family: "TeXGyreHerosRegular"; 
+  src: url("../fonts/texgyreheros-regular.otf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+///мои переменнные
+$nav-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 120' width='70' height='120'><defs><marker id='arrowhead' markerWidth='4' markerHeight='7' refX='2' refY='3.5' orient='auto'><polygon points='4 0, 4 7, 0 3.5' fill='#{$yellow}'/></marker></defs><line  x1='35' y1='15' x2='35' y2='100' stroke='#{$yellow}' stroke-width='8' marker-start='url(#arrowhead)'/></svg>");
+
+$carousel-control-prev-icon-dark:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 50' width='300' height='50'><defs><marker id='arrowhead' markerWidth='5' markerHeight='3.5' refX='5' refY='1.75' orient='auto'><polygon points='5 0, 5 3.5, 0 1.75' fill='#757575'/></marker></defs><line x1='40' y1='25' x2='290' y2='25' stroke='#757575' stroke-width='8' marker-start='url(#arrowhead)'/></svg>");
+$carousel-control-next-icon-dark:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 50' width='300' height='50'><defs><marker id='arrowhead' markerWidth='5' markerHeight='3.5' refX='0' refY='1.75' orient='auto'><polygon points='0 0, 5 1.75, 0 3.5' fill='#757575'/></marker></defs><line x1='0' y1='25' x2='250' y2='25' stroke='#757575' stroke-width='8' marker-end='url(#arrowhead)' /></svg>");
+

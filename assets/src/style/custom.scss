@@ -1,0 +1,1509 @@
+$height-galery-active-img: 691px;
+$width-galery-active-img: 965px;
+$height-galery-photo: 103px;
+$width-galery-photo: 692px;
+$width-all-photoes: 520px;
+$width-spruce: 359px;
+
+@import 'mixin';
+////////////////////////////////HOME header/////////////////////////////
+body{
+    color: #212224;
+}
+.house-logo{
+    padding-left: 45px;
+    text-align: left;
+    img{padding-bottom: 26px;}
+}
+.club{
+    .house-logo{
+        position: relative;
+        top:-23px;
+        img{padding-bottom: 0;}
+    }
+}
+
+.phone{
+    flex-shrink: 0;
+    padding: 0;
+    .phone-logo{
+        margin-top: 5px;
+    }
+    .phone-call{
+        height: 43px;
+        width: 114px;
+        margin-left: 12px;
+        text-align: left;
+        a:first-child{
+            color: $yellow;
+            font-size: 14px;
+            vertical-align: 5px;
+        }
+        .ordered-call{
+            padding-bottom: 4px;
+            border-bottom: 1px solid $yellow;
+            color: #DDDDDD;
+            cursor: pointer;
+        }
+        
+    }
+}
+
+header .lang{
+    padding: 5px 0 0 28px;
+    letter-spacing: 0.05em;
+}
+
+.circle{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #757575;
+    display: flex;
+    img, span{
+        margin: auto;
+    }
+}
+.lang {
+    .btn {
+        color: #DDDDDD;
+        justify-content: center;
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+    .dropdown-menu{
+        background-color: transparent;
+        font-size: 14px;
+    }
+    .dropdown-item{
+        color: #DDDDDD;
+        padding: 0;
+    }
+}
+
+////////////////////////////////HOME main/////////////////////////////
+header .carousel-caption{
+    color: #DDDDDD;
+    display: grid;
+    grid-template-rows: 2fr  4fr  2fr;//1fr 1fr 4fr 1.6fr 0.4fr
+    padding: 10px 0;
+    main{
+        padding-left: 41px;
+        &>img{
+            height: 125px;
+            margin-right: 44px;
+        }
+    }
+}
+.title{
+    text-align: left;
+    padding: 0;
+    p{
+        font-size: 14px;
+        color: $yellow;
+        margin-bottom: 8px;
+    }
+    h1{
+        font-family: 'Cormorant', sans-serif;
+        font-size: 38px;
+        line-height: 38px;
+    }
+    a{
+        position: absolute;
+        bottom: 0;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 6px 51px;
+    }
+    
+}
+
+//изменение стилей bootsrap
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-indicators {
+    top: auto;
+    justify-content: flex-start;
+}
+.carousel-control-prev{
+    left: 189px;
+    width: 50px;
+    opacity: 1;
+}
+.carousel-control-next{
+    left: 264px;
+    width: 50px;
+    opacity: 1;
+}
+#carouselHome .carousel-control-prev,
+#carouselHome .carousel-control-next{
+    bottom: 45px;
+}
+.carousel-caption{
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 10px;
+    
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 50px;
+}
+.carousel-indicators{
+    right: auto;
+    li{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border-bottom: 0;
+        border-top: 0;
+        margin-left: 0px;
+    }
+}
+
+#carouselHome .carousel-indicators{
+    margin-left: 110px;
+    bottom: 50px;
+    li{
+        margin-right: 25px;
+    }
+}
+.btn{
+    font-size: 10px;
+}
+////////////////////////////////HOME footer/////////////////////////////
+header footer{
+    padding: 0 45px 0 100px;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    text-transform: uppercase;
+    align-items: flex-end;
+}
+header .adress{
+    display: flex;
+    span{
+        padding: 0 35px 0 10px;
+    }
+}
+.underground{
+    display: none;
+    .circle{
+        width: 15px;
+        height: 15px;
+        border: 1px solid $yellow; 
+        margin-right: 10px; 
+    }  
+}
+.underground-logo{
+    color: $yellow;
+}
+
+ol{
+    margin-bottom: 0;
+}
+
+////////////////////////////////MAIN nav/////////////////////////////
+
+.nav-pills .nav-link{
+    &>p, &>span{
+        display: none;
+        margin-left: 10px;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 0.05em;
+    }
+}
+.nav-circle{
+    width: 3px;
+    height: 3px;
+    background-color: $yellow;
+    border: 1px solid $yellow;
+    border-radius: 50%;
+}
+.nav-control-prev,
+.nav-control-next{
+    height: 20px;
+    margin: 39px 0 16px 9px;
+    &:hover{
+        cursor: pointer;
+    }
+    
+}
+.nav-control-next{
+    margin-top: 16px;
+}
+.nav-control-prev-icon,
+.nav-control-next-icon {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background: no-repeat  50% / 100% 100%;
+}
+.nav-control-prev-icon {
+    background-image: escape-svg($nav-control-prev-icon-bg);
+}
+.nav-control-next-icon{
+    
+   @include nav-control-next-color( #000);
+   &.white{
+        @include nav-control-next-color( #fff);
+    }
+}
+
+//изменение стилей bootsrap
+.navbar{
+    margin-top: 31px;
+    align-items: flex-start;
+    position: sticky;
+    top: 31px;
+    height: 100vh;
+    padding: 0 0 0 20px;
+}
+.nav-pills .nav-link.active{
+    background-color: transparent;
+    color: #757575;
+    padding: 4px 0 20px;
+    .nav-circle{
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-width: 0;
+        &:not(#dark-circle){
+            @include element-color(#ddd, 0.3, 0.5);
+        }
+        animation: pulse 1s infinite;
+    }
+    #dark-circle{
+        @include element-color(#212224, 1, 1);
+    }
+    p{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 30px;
+    }
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 12px;
+
+}
+////////////////////////////////MAIN galery/////////////////////////////
+.home + main{
+    display: grid;
+    grid-template-columns: 1fr 4.106fr;
+    position: relative;
+    
+}
+.photo-pills{
+    position: relative;
+}
+
+#galery{
+    height: $height-galery-active-img * 0.48 + $height-galery-photo - 44px;//750px;
+}  
+.galery-logo{
+    position: relative;
+    z-index: -1;
+    img{
+        width: $width-spruce * 0.48;
+    }
+    left: - $width-spruce * 0.62 * 0.48;
+    bottom: $width-spruce* 0.62 + $height-galery-photo * 0.68;
+}
+.selected-photo{
+    .carousel-item.active img{
+        height: $height-galery-active-img * 0.48;
+        width: 100%; 
+    }
+    .carousel-inner{
+        margin-bottom: -44px;
+    }
+}
+.all-photoes{
+    position: relative;
+    z-index: 1;
+    justify-content: flex-end;
+    background: #FDFBFB;
+    box-shadow: 0px 5px 60px rgba(55, 55, 55, 0.2);
+    height: $height-galery-photo;
+    li:last-child{
+        width: 202px;
+    }
+    li:first-child{
+        width: calc(100% - 202px);
+    }
+}
+.galery-photo{
+    display: none;
+}
+#house-tab{
+    padding-right: calc((100% - 82px) * 0.32);//76px;
+    padding-left:  calc((100% - 82px) * 0.68);//160px;
+}
+
+//изменение стилей bootsrap
+.selected-photo{
+    .carousel-control-prev,
+    .carousel-control-next{
+        bottom: -82px;
+        z-index: 2;
+    }
+    .carousel-control-prev{
+        left: 240px; 
+    }
+    .carousel-control-next{
+        left: 315px; 
+    }
+    .carousel-indicators{
+        margin-left: 57px;
+        bottom: -76px;
+    }
+}
+#plans, .selected-photo, #docs{
+    .carousel-indicators{
+        li{
+            background-color: #DDDDDD;
+            opacity: 1;
+            margin-right: 26px;
+        }
+        .active{
+            background-color: $yellow;
+        }
+    }
+    .carousel-control-prev-icon {
+        background-image: escape-svg($carousel-control-prev-icon-dark);
+    }
+    .carousel-control-next-icon {
+        background-image: escape-svg($carousel-control-next-icon-dark);
+    }
+}
+
+.nav-tabs {
+    border-bottom: 0; 
+    background-color:  #fff;
+    .nav-item{
+        margin-bottom: 0;
+    }
+    .nav-link{
+        border: 0;
+        padding: 9px 57px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 26px;
+        background-color: #F1F1F1;
+        color: #212224;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        &.active {
+            color: $yellow;
+        }
+    }
+}
+////////////////////////////////MAIN plans/////////////////////////////
+.forForest{
+    background:#161B21 url("../img/sales-bg 1.png") no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 790px;
+    height: 1401px;
+    z-index: -2;
+}
+
+#plans, #docs{
+    background-color: transparent;
+}
+#plans{
+    margin-bottom: 243px;
+    h2{
+        padding: 38px 0 42px;
+    }
+    & > div{
+        box-shadow: 0px 8px 20px rgba(33, 34, 36, 0.1);
+    }
+}
+
+#all-plans{
+    display: grid;
+    grid-template: 44px 44px / repeat(3, 1fr);
+    .nav-item.active{
+        order: 1;
+    }
+    .nav-item:not(.active){
+        order: 0;
+    }
+    .nav-link{
+        letter-spacing: 0.05em;
+        padding: 9px 0;
+        justify-content: center;
+    }
+}
+
+.plan-info{
+    justify-content: space-between;
+    & > img{
+        width: 34%;
+        height: 34%;
+    }
+    & > div:nth-child(2){
+        width: 54.5%;
+    }
+}
+.plan-description{
+    padding: 0 15px 23px 15px;
+    box-shadow: 0px 8px 20px rgba(33, 34, 36, 0.05);
+    h3{
+        font-family: 'Cormorant', sans-serif;
+        font-size: 30px;
+        line-height: 68px;
+        padding-left: 4px;
+        margin: 0;
+        text-align: left;
+    }
+    & > div{
+        list-style: none;
+        column-count: 2;
+        padding: 0;
+        margin: 0;
+        div{
+            text-align: left;
+            padding: 0;
+            p span:first-child{
+                width: 60%;//92px;
+            }
+        }
+        
+        p{
+            font-size: 12px;
+            line-height: 26px;
+            margin: 0;
+            span:first-child{
+                color: #757575;
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+    }
+    & + .contacs{
+        display: none;
+    }
+}
+.contacs{
+    margin: 30px 0 0;
+    padding-bottom: 64px;
+    color: #757575;
+    font-size: 14px;
+    line-height: 24px;
+    div{padding: 0;}
+    div:first-child{
+        margin-bottom: 16px;
+        text-align: left;
+    }
+    a{
+        display: inline-block;
+    }
+    a[href^='tel']{
+        color: #212224;
+    }
+    a[href^='#']{
+        color: $yellow;
+        border-bottom: 1px solid $yellow;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+//изменение стилей bootsrap
+.h1{
+    font-family: 'Cormorant', sans-serif;
+    font-size: 68px;
+    line-height: 68px;
+}
+
+#plans{
+    .tab-pane{
+        .carousel .room-size{
+                width: 446px;
+                justify-content: flex-end;
+                position: relative;
+                top: -40px;
+                div{
+                    padding: 9px 0;
+                    background-color: #fff;
+                    color: #757575;
+                    font-size: 12px;
+                    opacity: 0.7;
+                    width: 45px;
+                    text-transform: none;
+                    letter-spacing: 0.05em;
+                    margin: 0 5px;
+                    &.active {
+                        color: #212224;
+                        opacity: 1;
+                    }
+                }  
+        }
+        .carousel-item{
+            height: 600px;
+            .carousel-caption{
+                padding: 0 29px 0 34px;
+                background-color: #fff;
+                color: #212224;
+            }
+        }
+    }
+    .carousel-indicators{
+        bottom: 42px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next{
+        bottom: 36px;
+    }
+    .carousel-control-prev{
+        left: 280px; 
+    }
+    .carousel-control-next{
+        left: 340px; 
+    }
+}
+////////////////////////////////MAIN docs/////////////////////////////
+#docs{
+    margin: 0 0 78px;
+    color: #FDFBFB;
+    .docs-description{
+        margin: 20px 30px 64px 0;
+        
+        p{
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            line-height: 24px;
+            color: #DDDDDD;
+        }
+    }
+    #docs-card{
+        margin: 0;
+        .carousel-caption{
+            position: static;
+            padding: 0;
+        }
+        &>div{
+            padding: 0;
+        }
+    }
+    .card-deck{
+        margin: 0;
+    }
+    .card{
+        margin: 0 50px 0 0;
+        border: 0.5px solid #757575;
+        border-radius: 0;
+        background-color: transparent;
+        &>img{
+            width: 47px;
+            height: 52px;
+            margin: 34px 0 -40px 21px;
+        }
+        .img-title{
+            font-size: 12px;
+            line-height: 26px;
+            color: #757575;
+            margin-bottom: 25px;
+            :first-child{
+                margin-right: 35%;
+                margin-left: 34px;
+                color: $yellow;
+            }
+        }
+        .card-text{
+            text-align: start;
+        }
+    }
+    .card-body{
+        padding: 20px 0 22px;
+        margin: 0 22px 0 21px;
+        border-bottom: 0.5px solid #757575;
+        font-family: 'Cormorant', sans-serif;
+        font-size: 18px;
+        line-height: 26px;
+        color: #DDDDDD;
+    }
+    .card-footer {
+        padding: 24px 0 20px 21px;
+        text-align: start;
+        small{
+            margin-right: 42%;//73px;
+            font-size: 12px;
+            line-height: 26px;
+            color: #757575;
+        }
+        img{
+            height: 13px;
+            width: 10px;
+        }
+    }
+
+    .carousel-indicators {
+        margin: 78px 0 0;
+        position: static;
+        
+    }
+    .carousel-control-prev,
+    .carousel-control-next{
+        position: relative;
+        bottom: 14px;
+    }
+    .carousel-control-prev{
+        left: 45%; 
+    }
+    .carousel-control-next{
+        left: 10%;//65%; 
+    }
+}
+////////////////////////////////MAIN contacts/////////////////////////////
+#contacts{
+    height: 897px;
+    &>div{ 
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 37px;
+    }
+    h2{
+        grid-column: 1/-1;
+        margin-bottom: 0;
+    }
+    .adress, .tel{
+        display: flex;
+        flex-direction: column;
+        :nth-child(2n){
+            font-family: 'Cormorant', sans-serif;
+            font-size: 30px;
+            line-height: 68px;
+            margin: 0;
+            color: #212224;
+            text-decoration: none;
+        }
+        :nth-child(3) a{
+            font-size: 14px;
+            line-height: 24px;
+            color: $yellow;
+            border-bottom: 1px solid $yellow;
+            text-decoration: none;
+            padding-bottom: 2px;
+        }
+        small{
+            font-size: 14px;
+            line-height: 24px;
+            color: #757575;
+            margin-bottom: -16px;
+        }
+    }
+    #error{
+        font-size: 14px;
+        line-height: 24px;
+        color: red;
+        margin-top: 20px;
+        margin-bottom: -44px;
+        cursor: pointer;
+    }
+    .adress{
+        padding: 0;
+        grid-column: 1/-1;
+    }
+    .tel{
+        padding: 0;
+        .time{
+            margin-left: 30px;
+        }
+        div a{
+            cursor: pointer;
+        }
+    }
+    .time{
+        align-self: center;
+        font-size: 10px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #757575;
+    }
+    &>div>small{
+        padding: 0;
+        display: none;
+    }
+    .writeUs{
+        align-self: center;
+        img{
+            height: 22px;
+            width: 21px;
+            margin-right: 23px;
+        }
+        a{
+            font-size: 14px;
+            line-height: 24px;
+            color: $yellow;
+            border-bottom: 1px solid $yellow;
+            padding-bottom: 2px;
+            text-decoration: none;
+        }
+    }
+    #map{
+        margin-top: 30px;
+        grid-column: 1/-1;
+        height: 435px;
+        .gm-style .gm-style-iw-c {
+            padding: 0;
+            border-radius: 0;
+            background: #212224;
+                
+        }
+       .content{
+            background: #212224;
+            font-size: 10px;
+            line-height: 26px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #DDDDDD;
+            &:not(#infoWin3){ 
+                height: 46px;
+                width: 85px;
+            }
+            
+            #infoWin2{
+                height: 39px;
+                width: 33px;
+            }
+            #infoWin1{
+                height: 65px;
+                width: 47px;
+                margin: -10px 0;
+            }
+        }
+        #infoWin3{
+            padding: 4px 11px;
+            width: 105px;
+        }
+    }
+}
+
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece, .gm-style .gm-style-iw-t::after{
+    background: #212224;
+}
+.gm-style .gm-style-iw-t::after{
+    box-shadow: none;
+    height: 8px;
+    width: 8px;
+}
+.gm-ui-hover-effect {
+    display: none !important;
+}
+.gm-style .gm-style-iw-d::-webkit-scrollbar {
+   height: 0px; 
+   width: 0;
+}
+
+.gm-style-iw {
+    position: absolute;
+    text-align: center;
+}
+
+////////////////////////////////FOOTER/////////////////////////////
+.footer{
+    background: #212224;
+    color: #B3AEAE;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 0 45px;
+    display: grid;
+    grid-template-columns: 95px repeat(2, 1fr) 70px;
+    grid-template-rows: repeat(2, 44px);
+    grid-column-gap: 10%;
+    .logo{
+        margin-top: -15px;
+    }
+    .adress{
+        display: none;
+        align-self: end;
+        span{
+            margin-left: 19px;
+        }
+    }
+    .tel{
+        img{
+            width: 12px;
+            margin-right: 14px;
+        }
+        a{
+            color: #B3AEAE;
+            text-decoration: none;
+        }
+        span{
+            display: none;
+        }
+        align-self: end;
+        grid-column: 2/4;
+    }
+    .social-icons{
+        align-self: center;
+        grid-column: 2/3;
+        grid-row: 2/-1;
+        display: flex;
+        align-items: baseline;
+        img:first-child{
+            margin-right: 10%;
+        }
+    }
+    .langs{
+        align-self: center;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0; /* Отступ слева в браузере IE и Opera */
+        :first-child{
+            margin-right: 10%;
+            a{
+                color: #B2AEAE;
+                border-bottom: 1px solid $yellow;
+                padding-bottom: 2px;
+            }
+        }
+        :last-child a{
+            color: #757575;
+        }
+        li{
+            list-style-type: none;
+            font-size: 10px;
+            width: 15px;
+            letter-spacing: 0.05em;
+            a{
+                text-decoration: none;
+            }
+            
+        }
+    }
+    .logo-orange{
+        padding: 30px 0;
+        grid-column: -2/-1;
+    }
+    .logo, .logo-orange{
+        grid-row: 1/-1;
+    }
+}
+
+////////////////////////////////MODAL/////////////////////////////
+#callModal{
+    .modal-content{
+        background:linear-gradient( rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5) ), url('../img/forCall.png') no-repeat;
+        border-radius: 0;
+        background-size: 100%;
+        border: 0;
+        padding: 20px;
+        &>div{
+            border: 1px solid $yellow;
+            height: 466px;
+        }
+    }
+    .modal-header{
+        border-bottom: 0;
+        padding: 23px 24px 0 47px;
+        h2{
+            font-family: 'Cormorant', sans-serif;
+            font-size: 68px;
+            line-height: 68px;
+            width: 249px;
+            padding-top: 28px;
+        }
+        .close{
+            margin: 0;
+            background: #FDFBFB;
+            border: 0.5px solid $yellow;
+            border-radius: 50%;
+            padding: 6px;
+            height: 28px;
+            opacity: 1;
+            font-weight: 400;
+            span{
+                position: relative;
+                top: -8px;
+            }
+        }
+    }
+    .modal-body{ 
+        padding: 0;
+        form{
+            padding: 0 53px 0 47px;
+            button{
+                margin: 49px 0 53px;
+            }
+            .btn {
+                padding: 5px 60px;
+            }
+        }
+        .form-group{
+            height: 66px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid $yellow;
+            padding-top: 24px;
+            padding-left: 10px;
+            font-size: 14px;
+            line-height: 24px;
+            input{
+                border: 0;
+            }
+        }
+    }
+    input{
+        background-color: transparent;
+        width: 70%;
+    }
+    label{
+        color: white;
+        width: 27%;
+    }
+}
+
+@media(min-width:576px){
+    .phone{
+        padding-top: 6px; 
+    }  
+    header .lang{
+        padding-top: 11px;
+    } 
+    header .carousel-caption{
+        padding-top: 22px;
+    }
+    .title{
+        padding-right: 30px;
+    }
+    #carouselHome .carousel-indicators{
+        bottom: 65px;
+    }
+    #carouselHome .carousel-control-prev,
+    #carouselHome .carousel-control-next{
+        bottom: 60px;
+    }
+} 
+
+@media(min-width:768px){
+    .phone{
+        padding-left: 93px; 
+    } 
+    header .carousel-caption{
+        padding-bottom: 23px;
+    }  
+    .title {
+        h1{
+            font-size: 48px; 
+            line-height: 48px;
+        }
+        padding-right: 50px;
+    } 
+    header .carousel-caption{
+        grid-template-rows: 2fr 3.5fr 2fr;//1fr 1fr 3.5fr 1.6fr 0.4fr;
+    } 
+    header .adress span{
+        padding-right: 85px;
+    }
+    #carouselHome .carousel-indicators{
+        bottom: 100px;
+    }
+    #carouselHome .carousel-control-prev,
+    #carouselHome .carousel-control-next{
+        bottom: 95px;
+    }
+    ///////////navbar/////////////////
+    .navbar{
+        margin-top: 51px;
+        top: 51px;
+    }
+    .nav-link{
+        padding: 26px 0 26px 12px;
+    
+    }
+    .nav-pills .nav-link.active{
+        &>span{
+            display: inline;
+        }
+        &>p{
+            display: none;
+        }
+        padding: 12px 0 26px;
+    }
+    ///////////galery/////////////////
+    .selected-photo{
+        .carousel-item.active img{
+            height: $height-galery-active-img * 0.64; //617.6;
+            width: $width-galery-active-img * 0.64; 
+        }
+        .carousel-control-prev{
+            left: 340px; 
+        }
+        .carousel-control-next{
+            left: 415px; 
+        }
+        .carousel-indicators{
+            margin-left: 157px;
+        } 
+    }
+    
+    .galery-logo{
+        img{
+            width: $width-spruce * 0.64;
+        }
+        left: - $width-spruce * 0.62 * 0.64;
+        bottom: $width-spruce + $height-galery-photo * 0.14;
+    }
+    #galery{
+        height: $height-galery-active-img * 0.64 + $height-galery-photo - 44px;//750px;
+    }
+    //////////plans/////////////////
+    #plans{
+        .carousel-control-prev{
+            left: 450px; 
+        }
+        .carousel-control-next{
+            left: 520px; 
+        }
+        .tab-pane .carousel .room-size div{
+                margin-right: 12px;
+                margin-left: 15px;
+        }
+        .tab-pane .carousel-item{
+            height: 455px;
+        }
+        .carousel-indicators{
+            margin-left: 35%;
+        }
+    }
+    #one_room-plans,
+        #two_room-plans,
+        #three_room-plans,
+        #with_terraces-plans{
+        .room-size{right: -150px;}
+    }
+     ///////////docs/////////////////
+    #docs{
+        #docs-card{
+            margin-right: 150px;
+        }
+    }
+    .forForest{
+        height: 1366px;
+    }
+    ///////////contacts/////////////////
+    #contacts{
+        height: 740px;
+        &>div{
+            grid-template-columns: 2fr 1fr;
+            grid-row-gap: 27px;
+        }
+        .writeUs{
+            grid-row: 1/2;
+            grid-column: -2/-1;
+        }
+        h2{
+            grid-column: 1/-2;
+        }
+        .adress{
+            grid-column: 1/2;
+        }
+    }
+    ///////////footer/////////////////
+    .footer{
+        grid-template-columns: 95px 5fr 1fr 70px;
+        .adress{
+            display: block;
+        }
+        .tel{
+            grid-column: 2/3;
+            align-self: start;
+            span{display: inline;}
+        }
+        .langs{
+            align-self: start;    
+        }
+        .social-icons{
+            align-self: end;
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        .social-icons, .langs{justify-content: space-between;}
+    }
+} 
+
+@media(min-width:992px){
+    .phone{
+        padding-left: 60px; 
+    } 
+    .title h1{
+        font-size: 68px; 
+        line-height: 68px;   
+    }  
+    .btn{
+        line-height: 26px;
+    }
+    .lang .btn {
+        padding: 0;
+    }
+    #carouselHome .carousel-indicators{
+        bottom: 125px;
+    }
+    #carouselHome .carousel-control-prev,
+    #carouselHome .carousel-control-next{
+        bottom: 120px;
+    } 
+    ///////////navbar/////////////////
+    .navbar{
+        margin-top: 91px;
+        top: 91px;
+        padding-left: 45px;
+    }
+    .nav-link{
+        padding: 36px 0 36px 12px;
+    
+    }
+    .nav-pills .nav-link.active{
+        padding: 22px 0 36px;
+    }
+    ///////////galery/////////////////
+    .selected-photo .carousel-item.active img{
+        height: $height-galery-active-img; //691px; 
+        width: 100%; 
+    }
+    #galery .photo-pills{
+        left: -255px;
+    }
+    .galery-photo{
+        display: flex;
+        width: $width-galery-photo * 0.82;
+        height: $height-galery-photo * 0.82;
+        right: - 235px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+        z-index: 2;
+        img{
+         height: 71.85%;//74px;
+         width: 18.64%;//129px
+         padding-left: 10px;
+        } 
+        .active-img{
+            height: 100%;
+            width: 25.43%;//176px;
+        }   
+    }
+    .all-photoes{
+        width: $width-all-photoes * 0.82;;
+        height: $height-galery-photo * 0.82;
+        left: -194px;
+    }
+    .selected-photo{
+        margin-bottom: -$height-galery-photo * 0.82;
+        .carousel-indicators{
+            bottom: -66px;
+        }
+        .carousel-control-prev,
+        .carousel-control-next{
+            bottom: -72px;
+        }
+    }
+    .galery-logo{
+        img{
+            width: $width-spruce * 0.82;
+        }
+        left: - $width-spruce * 0.62 *0.82;
+        bottom: $width-spruce + $height-galery-photo * 0.62;
+    }
+    #galery{
+        height: $height-galery-active-img + $height-galery-photo * 0.82 - 44px;//750px;
+    }///////////plans/////////////////
+    #plans{
+        .photo-pills{
+            left: -275px;
+        }
+        .carousel-indicators{
+            margin-left: 640px;
+        }
+        .tab-pane .carousel-item{
+            height: 485px;
+        }
+        .carousel-control-prev{
+            left: 884px; 
+        }
+        .carousel-control-next{
+            left: 960px; 
+        }
+    }
+    #all-plans{ 
+        display: flex;
+        .nav-item.active{
+            order: 0;
+        }
+        .nav-link{
+            padding-right: 12px;
+            padding-left: 25px;
+            justify-content: flex-start;
+            &#with_terraces-tab{
+                padding-left: 5px;
+            }
+            span{
+                display: none;
+            }
+            &.active{
+                span{
+                    display: inline;
+                }
+                width:570px;
+            }
+        }
+    }
+    #one_room-plans .room-size{
+        right: -105px;
+    }
+    #two_room-plans .room-size{
+        right: -200px;
+    }
+    #three_room-plans .room-size{
+        right: -270px;
+    }
+    #with_terraces-plans .room-size{
+        right: -350px;
+    }
+    .plan-info{
+        & > img{
+            width: 266px;
+        }
+        &>div{
+            width: 426px;
+        }
+        & > .contacs{
+            display: none;
+        }
+    }
+    .plan-description{
+        padding: 0 0 33px 26px;
+        &>div{
+            div:first-child{
+                padding-left: 4px;
+                padding-right: 0;
+                border-right:  0.5px solid #DDDDDD;
+                p span:first-child{
+                    width: 92px;
+                }
+            }
+            div:last-child{
+                padding: 0 25px 0 27px;
+                p {
+                    margin: 0;
+                    span:first-child{
+                        width: 65px;
+                    }
+                }
+            }
+        }
+        & + .contacs{
+            display: flex;
+        }
+    }
+    .contacs{
+        div:nth-child(2){
+            padding-left: 13px;
+        }
+        div{padding-right: 60px;}
+    }
+    ///////////docs/////////////////
+    #docs{
+        .docs-description{ 
+            display: grid;
+            grid-column-gap: 30px;
+            grid-template-columns: repeat(2, 45%);
+            margin-right: 0;
+        }
+        .card-deck{
+            margin: 0 5% 0 0;
+        }
+        .carousel-control-prev,
+        .carousel-control-next{
+            bottom: -40px;
+        }
+        .carousel-control-prev{
+            left: -15%; 
+        }
+        .carousel-control-next{
+            left: -38%; 
+        }
+        
+        #docs-card{
+            margin-right: 0;
+        }
+    }
+    .forForest{
+        height: 1553px;
+    }
+    ///////////contacts/////////////////
+    #contacts{
+        height: 814px;
+        & > div{ 
+            padding-top: 137px;
+            grid-template-columns: 2fr repeat(2, 1fr);
+            grid-row-gap: 37px;
+        }
+        
+        & > div > small{
+            display: block;
+        }
+        
+        #map{
+            margin-top: 0;
+        }
+    }
+    ///////////madal/////////////////
+    #callModal{
+        .modal-content{
+            background:url('../img/forCall.png') no-repeat white;
+            background-position: right;
+            background-size: auto;
+        }
+        .modal-body .form-group{
+            border-bottom: 1px solid #DDDDDD;
+        }
+        label{
+            color: #757575;
+        }
+    }
+}
+
+@media(min-width:1200px){
+    .phone{
+        padding-left: 21px; 
+    } 
+    header .carousel-caption{
+        grid-template-rows: 3fr 3.5fr 3fr;//1fr 2fr 3.5fr 2.6fr 0.4fr;
+    }
+    ///////////galery/////////////////
+    #galery .photo-pills, #plans .photo-pills{
+        left: -235px;
+    }
+    .galery-photo{
+        width: $width-galery-photo;
+        height: $height-galery-photo;
+        right: - 285px;
+    }
+    .all-photoes{
+        width: $width-all-photoes;
+        height: $height-galery-photo;
+        left: -235px;
+    }
+    .selected-photo{
+        margin-bottom: -$height-galery-photo;
+        .carousel-indicators{
+            bottom: -76px;
+        }
+        .carousel-control-prev,
+        .carousel-control-next{
+            bottom: -82px;
+        }
+    }
+    .galery-logo{
+        img{
+            width: $width-spruce;
+        }
+        left: - $width-spruce * 0.62;
+        bottom: 521px;
+    }
+    #galery{
+        height: 750px;
+    }
+    ///////////plans/////////////////
+    #plans{
+        margin-right: 79px;
+        .tab-pane .carousel-item .carousel-caption{
+            padding: 0 49px 0 54px;
+        }
+    }
+    #all-plans .nav-link span{
+        display: inline;
+    }
+    #two_room-plans .room-size{
+        right: -229px;
+    }
+    #three_room-plans .room-size{
+        right: -335px;
+    }
+    #with_terraces-plans .room-size{
+        right: -435px;
+    }
+    
+    .plan-description> div p span:first-child{margin-right: 30px;}
+    ///////////docs/////////////////
+    #docs{
+        .docs-description{ 
+            grid-template-columns: repeat(2, 36.3%);//350px);
+        }
+        .card-deck{
+            margin-right: 25.7%;//248px
+        }
+        #docs-card{
+            margin-right: 235px;
+        }
+    }
+    ///////////contacts/////////////////
+    #contacts{
+        height: 765px;
+        &>div{
+            position: absolute;
+            left: 140px;
+            grid-template-columns: 255px 400px 200px 205px;
+            grid-row-gap: 57px;
+        }
+        h2{
+            grid-column: 1/2;
+        }
+        .writeUs{
+            grid-row: 2/3;
+            grid-column: 1/2;
+            align-self: stretch;
+        }
+        #map{
+            grid-column: 2/-1;
+            height: 435px;
+        }
+        .adress{
+            padding: 34px 29px 0 30px;
+            grid-column: 2/3;
+        }
+        
+        .tel{
+            padding: 34px 0 0 10px;
+        }
+        
+        &>div>small{
+            padding: 30px 85px 0 18px;
+        }
+    }
+    ///////////footer/////////////////
+    .footer{
+        grid-template-columns: 95px 230px 226px 49px 45px 70px;
+        grid-template-rows: 88px;
+        grid-column-gap: 79px;
+        .adress, .tel, .langs{
+            padding: 31px 0;
+        }
+        .tel{
+            grid-column: 3/4;
+        }
+        .social-icons{
+            grid-column: -3/-2;
+            grid-row: 1/2;
+            padding: 37px 0 35px;
+        }
+    }
+}

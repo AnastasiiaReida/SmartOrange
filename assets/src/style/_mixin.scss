@@ -1,0 +1,8 @@
+@mixin element-color($color, $op1, $op2) {
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30'><g><circle fill='#{$color}' fill-opacity='#{$op1}' stroke='#{$yellow}' stroke-width='0.5' cx='15' cy='15' r='15'></circle><circle fill='#{$color}' fill-opacity='#{$op2}' stroke='#{$yellow}' stroke-width='0.5' cx='15' cy='15' r='10'></circle><circle fill='#{$yellow}' cx='15' cy='15' r='3'></circle></g></svg>"));
+}//include
+
+@mixin nav-control-next-color($color){
+  //$nav-control-next-icon-bg:#000      
+  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 120' width='70' height='120'><defs><marker id='arrowhead' markerWidth='4' markerHeight='7' refX='0' refY='3.5' orient='auto'><polygon points='0 0, 4 3.5, 0 7' fill='#{$color}'/></marker></defs><line  x1='35' y1='0' x2='35' y2='80' stroke='#{$color}' fill='#{$color}' stroke-width='8' marker-end='url(#arrowhead)' /></svg>"));
+}

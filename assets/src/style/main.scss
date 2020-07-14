@@ -1,0 +1,6 @@
+// Переопределение дефолтных значений переменных Bootstrap 4 и определение своих
+@import "variables";
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@import "custom";
